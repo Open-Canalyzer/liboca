@@ -14,13 +14,13 @@ release: build/Release
 	$(Q)echo "[RELEASE]"
 	$(MAKE) -C $^
 
-ci: lint debug release test coverage
+ci: lint debug release test
 
 lint: build/Debug
 	$(Q)echo "[LINT]"
 	$(MAKE) -C build/Debug lint
 
-coverage: test build/Debug
+coverage: build/Debug
 	$(Q)echo "[DEBUG]"
 	$(MAKE) -C build/Debug coverage
 
