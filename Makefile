@@ -8,6 +8,14 @@ endif
 all: release
 ci: lint debug release test
 
+help:
+	$(Q)echo "      release: Run a release build"
+	$(Q)echo "        debug: Run a debug build"
+	$(Q)echo "         lint: Lint check all source-code"
+	$(Q)echo "         test: Build and run tests"
+	$(Q)echo "        clean: Clean all build output"
+	$(Q)echo "rebuild_cache: Rebuild all CMake caches"
+
 rebuild_cache: build/Debug build/Release
 	$(MAKE) -C build/Debug rebuild_cache
 	$(MAKE) -C build/Release rebuild_cache
@@ -15,6 +23,7 @@ rebuild_cache: build/Debug build/Release
 debug: build/Debug
 	$(Q)echo "[DEBUG]"
 	$(MAKE) -C $^
+
 release: build/Release
 	$(Q)echo "[RELEASE]"
 	$(MAKE) -C $^
@@ -22,6 +31,9 @@ release: build/Release
 lint: build/Debug
 	$(Q)echo "[LINT]"
 	$(MAKE) -C build/Debug lint
+
+analyze: 
+	scan-build -o build/Analyze --status-bugs make debug
 
 test: build/Debug
 	$(MAKE) -C build/Debug test

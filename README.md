@@ -10,7 +10,10 @@ Library to support the [Open-Canalyzer](https://github.com/maartentamboer/Open-C
 * Make (when generating makefiles)
 
 ```
+$ make help
+$ make lint
 $ make debug
+$ make test
 $ make release
 ```
 
