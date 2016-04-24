@@ -9,9 +9,14 @@ if(${CMAKE_BUILD_TYPE} MATCHES "Debug")
 	add_cflag_if_supported("-ggdb")
 	add_cflag_if_supported("-fprofile-arcs")
 	add_cflag_if_supported("-ftest-coverage")
+
+	add_definitions("-DDEBUG")
+
 	include(CTest)
 elseif()
 	add_cflag_if_supported("-O2")
+
+	add_definitions("-DRELEASE")
 endif()
 
 set(SRC src/oca.c)
