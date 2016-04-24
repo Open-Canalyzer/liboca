@@ -1,0 +1,14 @@
+language: c
+sudo: true
+
+addons:
+  apt:
+    packages:
+      - clang
+
+compiler:
+  - clang
+  - gcc
+  - scan-build
+
+script: ./.travis.sh
