@@ -2,8 +2,10 @@ cmake_minimum_required(VERSION 2.8)
 project(liboca C)
 
 include(cmake/CheckCCompilerFlag.txt)
+include(cmake/Lint.txt)
 
 set(SRC src/test.c)
+add_lint(${SRC})
 
 add_library(${PROJECT_NAME}-static STATIC ${SRC})
 set_target_properties(${PROJECT_NAME}-static PROPERTIES OUTPUT_NAME ${PROJECT_NAME} PREFIX "")
