@@ -1,8 +1,8 @@
 # Open-Canalyzer C11 library
 
-Library to support the Open-Canalyzer cross-platform (mac/linux/windows)
+Library to support the [Open-Canalyzer](https://github.com/maartentamboer/Open-Canalyzer). Cross-platform Mac/Linux/Windows.
 
-[![Build Status](https://travis-ci.org/xor-gate/liboca.svg?branch=master)](https://travis-ci.org/xor-gate/liboca) [![Build status](https://ci.appveyor.com/api/projects/status/1erkok66sf2vp37s/branch/master?svg=true)](https://ci.appveyor.com/project/xor-gate/liboca/branch/master)
+[![Build Status](https://travis-ci.org/xor-gate/liboca.svg?branch=master)](https://travis-ci.org/xor-gate/liboca)
 
 # Building
 
