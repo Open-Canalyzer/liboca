@@ -1,6 +1,7 @@
 #ifndef OCA_H_
 #define OCA_H_
 
+#include <stdlib.h>
 #include <stdint.h>
 
 enum oca_ret {
@@ -21,7 +22,8 @@ struct oca_can_msg {
 struct oca_can *oca_init(const char *serial);
 void oca_destroy(struct oca_can **ctx);
 
-enum oca_ret oca_can_read(struct oca_can_msg *msg);
+enum oca_ret oca_can_read(struct oca_can_msg **msg);
 enum oca_ret oca_can_write(struct oca_can_msg *msg);
+void oca_can_msg_free(struct oca_can_msg **msg);
 
 #endif /* OCA_H_ */

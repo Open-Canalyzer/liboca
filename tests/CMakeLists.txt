@@ -1,0 +1,16 @@
+if (NOT BUILD_TESTING)
+        message("-- ${PROJECT_NAME} tests disabled")
+        return()
+endif()
+message("-- ${PROJECT_NAME} tests enabled")
+
+set(TESTS
+        simple
+)
+
+foreach(test ${TESTS})
+        add_executable(${test} ${test}.c)
+        add_dependencies(${test} ${PROJECT_NAME}-static)
+        target_link_libraries(${test} ${PROJECT_NAME}-static)
+        add_test(NAME "${test}" COMMAND "${CMAKE_CURRENT_BINARY_DIR}/${test}")
+endforeach()

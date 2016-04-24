@@ -6,6 +6,11 @@ NULL := 2>/dev/null
 endif
 
 all: release
+ci: lint debug release test
+
+rebuild_cache: build/Debug build/Release
+	$(MAKE) -C build/Debug rebuild_cache
+	$(MAKE) -C build/Release rebuild_cache
 
 debug: build/Debug
 	$(Q)echo "[DEBUG]"
@@ -14,15 +19,9 @@ release: build/Release
 	$(Q)echo "[RELEASE]"
 	$(MAKE) -C $^
 
-ci: lint debug release test
-
 lint: build/Debug
 	$(Q)echo "[LINT]"
 	$(MAKE) -C build/Debug lint
-
-coverage: build/Debug
-	$(Q)echo "[DEBUG]"
-	$(MAKE) -C build/Debug coverage
 
 test: build/Debug
 	$(MAKE) -C build/Debug test
