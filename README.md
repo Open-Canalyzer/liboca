@@ -2,7 +2,7 @@
 
 Library to support the Open-Canalyzer cross-platform (mac/linux/windows)
 
-[![Build Status](https://travis-ci.org/xor-gate/liboca.svg?branch=master)](https://travis-ci.org/xor-gate/liboca)
+[![Build Status](https://travis-ci.org/xor-gate/liboca.svg?branch=master)](https://travis-ci.org/xor-gate/liboca) [![Build status](https://ci.appveyor.com/api/projects/status/1erkok66sf2vp37s/branch/master?svg=true)](https://ci.appveyor.com/project/xor-gate/liboca/branch/master)
 
 # Building
 

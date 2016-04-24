@@ -4,8 +4,9 @@ project(liboca C)
 include(cmake/CheckCCompilerFlag.txt)
 include(cmake/Lint.txt)
 
-set(SRC src/test.c)
+set(SRC src/oca.c)
 add_lint(${SRC})
+include_directories(include)
 
 add_library(${PROJECT_NAME}-static STATIC ${SRC})
 set_target_properties(${PROJECT_NAME}-static PROPERTIES OUTPUT_NAME ${PROJECT_NAME} PREFIX "")
