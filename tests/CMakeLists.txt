@@ -1,8 +1,8 @@
 if (NOT BUILD_TESTING)
-        message("-- tests disabled")
+        message(STATUS "tests disabled")
         return()
 endif()
-message("-- tests enabled")
+message(STATUS "tests enabled")
 
 set(TESTS
         simple
