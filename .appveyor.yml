@@ -27,4 +27,4 @@ before_build:
   - cd c:\projects\liboca
   - mkdir build\Debug
   - cd build\Debug
-  - cmake ..\ -DCMAKE_BUILD_TYPE=Debug -G "Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX=%P%
+  - cmake ..\..\ -DCMAKE_BUILD_TYPE=Debug -G "Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX=%P%
