@@ -25,4 +25,6 @@ build:
 before_build:
   - echo Running cmake...
   - cd c:\projects\liboca
-  - cmake -G "Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX=%P%
+  - mkdir build
+  - cd build
+  - cmake ..\ -G "Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX=%P%
