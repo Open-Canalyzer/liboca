@@ -26,8 +26,11 @@ elseif()
 endif()
 
 set(SRC src/oca.c)
-add_lint(${SRC})
 include_directories(include)
+
+if(OCA_LINT AND BUILD_TESTING)
+	add_lint(${SRC})
+endif()
 
 add_library(${PROJECT_NAME}-static STATIC ${SRC})
 set_target_properties(${PROJECT_NAME}-static PROPERTIES OUTPUT_NAME ${PROJECT_NAME} PREFIX "")

@@ -1,4 +1,14 @@
-find_package(Perl REQUIRED)
+find_package(Perl QUIET)
+
+option(OCA_LINT "Enable linting with checkpatch (perl required)" OFF)
+
+if (NOT PERL_EXECUTABLE)
+	message(STATUS "linting disabled")
+	return()
+else()
+	set(OCA_LINT ON)
+	message(STATUS "linting enabled")
+endif()
 
 function(add_lint SOURCES_LIST)
   list(REMOVE_DUPLICATES SOURCES_LIST)
