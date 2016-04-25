@@ -1,8 +1,8 @@
 if (NOT BUILD_TESTING)
-        message("-- ${PROJECT_NAME} tests disabled")
+        message(STATUS "${PROJECT_NAME} tests disabled")
         return()
 endif()
-message("-- ${PROJECT_NAME} tests enabled")
+message(STATUS "${PROJECT_NAME} tests enabled")
 
 set(TESTS
         simple
