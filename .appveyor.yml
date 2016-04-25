@@ -18,7 +18,7 @@ install:
   # by default, all script lines are interpreted as batch
 
 build:
-  project: projects\vs\liboca.sln
+  project: C:\projects\liboca\build\liboca.sln
   parallel: true
 
 # scripts to run before build
