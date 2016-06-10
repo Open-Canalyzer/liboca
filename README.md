@@ -2,8 +2,8 @@
 
 Library to support the [Open-Canalyzer](https://github.com/maartentamboer/Open-Canalyzer). Cross-platform Mac/Linux/Windows.
 
-[![Build Status](https://travis-ci.org/xor-gate/liboca.svg?branch=master)](https://travis-ci.org/xor-gate/liboca)
-[![Build status](https://ci.appveyor.com/api/projects/status/tyexrbncvoqev89b?svg=true)](https://ci.appveyor.com/project/maartentamboer/liboca)
+[![Build Status](https://travis-ci.org/Open-Canalyzer/liboca.svg?branch=master)](https://travis-ci.org/Open-Canalyzer/liboca)
+[![Build status](https://ci.appveyor.com/api/projects/status/39g6e92kquvbs02x?svg=true)](https://ci.appveyor.com/project/maartentamboer/liboca-x1l0v)
 
 # Building
 
