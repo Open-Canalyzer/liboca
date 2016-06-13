@@ -1,5 +1,6 @@
 #include <oca.h>
 #include <stdlib.h>
+#include <libusb.h>
 
 struct oca_can *oca_init(const char *serial)
 {
