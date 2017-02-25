@@ -9,6 +9,9 @@ addons:
 compiler:
   - clang
   - gcc
-  - scan-build
+
+os:
+  - linux
+  - osx
 
 script: ./.travis.sh
