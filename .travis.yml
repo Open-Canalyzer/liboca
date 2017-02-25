@@ -9,7 +9,6 @@ addons:
 compiler:
   - clang
   - gcc
-  - scan-build
 
 os:
   - linux
