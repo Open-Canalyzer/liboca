@@ -63,4 +63,15 @@ add_library(${PROJECT_NAME}-shared SHARED ${SRC})
 set_target_properties(${PROJECT_NAME}-shared PROPERTIES OUTPUT_NAME ${PROJECT_NAME} PREFIX "")
 target_link_libraries(${PROJECT_NAME}-shared ${LIBUSB_LIBRARY})
 
+
+if (APPLE)
+	find_library(ObjC objc)
+	find_library(CoreFoundation CoreFoundation)
+	find_library(IOKit IOKit)
+
+	target_link_libraries(${PROJECT_NAME}-static ${CoreFoundation} ${IOKit} ${ObjC})
+	target_link_libraries(${PROJECT_NAME}-shared ${CoreFoundation} ${IOKit} ${ObjC})
+endif ()
+
+
 add_subdirectory("tests")
