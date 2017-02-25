@@ -11,4 +11,8 @@ compiler:
   - gcc
   - scan-build
 
+os:
+  - linux
+  - osx
+
 script: ./.travis.sh
